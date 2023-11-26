@@ -1,3 +1,8 @@
-C:\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\mapping\Usuario.java
-C:\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\controllers\LoginController.java
-C:\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\App.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\entity\UsuarioEntity.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\controllers\LoginController.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\service\UsuarioService.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\controllers\UsuarioController.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\config\CorsConfig.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\entity\LoginEntity.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\repository\UsuarioRepository.java
+C:\WebVeterinaria\PAGINAWEBVETERINARIA\server\demo\src\main\java\paginawebveterinaria\App.java

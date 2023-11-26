@@ -1,4 +1,11 @@
 paginawebveterinaria\App.class
-paginawebveterinaria\mapping\Usuario$UsuarioCredentials.class
+paginawebveterinaria\service\UsuarioService.class
+paginawebveterinaria\repository\UsuarioRepository.class
 paginawebveterinaria\controllers\LoginController.class
-paginawebveterinaria\mapping\Usuario.class
+paginawebveterinaria\entity\LoginEntity$FiltroUsuario.class
+paginawebveterinaria\entity\LoginEntity$UsuarioCredentials.class
+paginawebveterinaria\entity\UsuarioEntity.class
+paginawebveterinaria\config\CorsConfig$1.class
+paginawebveterinaria\config\CorsConfig.class
+paginawebveterinaria\controllers\UsuarioController.class
+paginawebveterinaria\entity\LoginEntity.class
