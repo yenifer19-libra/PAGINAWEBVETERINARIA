@@ -1,1 +1,4 @@
 paginawebveterinaria\App.class
+paginawebveterinaria\entity\Usuario$UsuarioCredentials.class
+paginawebveterinaria\controller\LoginController.class
+paginawebveterinaria\entity\Usuario.class

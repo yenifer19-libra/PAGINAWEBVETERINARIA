@@ -1,4 +1,4 @@
-package paginawebveterinaria.controllers;
+package paginawebveterinaria.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import paginawebveterinaria.mapping.Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import paginawebveterinaria.entity.Usuario;
 // Hola otras importaciones
 @RestController
 public class LoginController {
@@ -35,6 +38,20 @@ public class LoginController {
         } else {
             // Si la autenticación falla
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Datos de login incorrectos");
+        }
+    }
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @GetMapping("/testdb")
+    public String testDbConnection() {
+        try {
+            // Intenta ejecutar una consulta SQL simple para comprobar la conexión
+            jdbcTemplate.queryForObject("SELECT 1", Integer.class);
+            return "Conexión a la base de datos exitosa";
+        } catch (Exception e) {
+            return "Error al conectar a la base de datos: " + e.getMessage();
         }
     }
     
