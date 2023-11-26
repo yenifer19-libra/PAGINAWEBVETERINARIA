@@ -1,4 +1,4 @@
-package paginawebveterinaria.mapping;
+package paginawebveterinaria.entities;
 
 //OBJETO PRINCIPAL
 public class Usuario {
