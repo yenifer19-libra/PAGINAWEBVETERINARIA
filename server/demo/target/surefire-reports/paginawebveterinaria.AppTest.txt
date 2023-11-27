@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: paginawebveterinaria.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 s - in paginawebveterinaria.AppTest
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 s - in paginawebveterinaria.AppTest
+>>>>>>> 588d58ffd27a5220ae4340a9c065180c91224cb4
