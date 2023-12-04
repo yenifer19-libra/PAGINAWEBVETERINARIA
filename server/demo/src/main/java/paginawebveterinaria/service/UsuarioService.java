@@ -1,4 +1,5 @@
 package paginawebveterinaria.service;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,9 +9,9 @@ import java.util.Set;
 
 import javax.transaction.Transactional;
 
-import paginawebveterinaria.repository.UsuarioRepository;
-import paginawebveterinaria.entity.LoginEntity;
 import paginawebveterinaria.entity.UsuarioEntity;
+import paginawebveterinaria.entity.LoginEntity.UsuariopruebaEntity;
+import paginawebveterinaria.repository.UsuarioRepository;
 
 @Service
 @Transactional
@@ -21,7 +22,7 @@ public class UsuarioService {
         List<UsuarioEntity> result = new ArrayList<>();
         try 
         {
-            result = usuarioRepository.sp_busqueda_tabla_prueba(id,name, email);
+            result = usuarioRepository.sp_ricerca_tabla_prueba(id,name, email);
             return result;
         } catch (Exception ex)
         {
@@ -29,15 +30,15 @@ public class UsuarioService {
         }
     }
 
-    public List<UsuarioEntity> busqueda_tabla_prueba_2(LoginEntity.FiltroUsuario filtro){
+    public List<UsuarioEntity> busqueda_tabla_prueba_2(UsuariopruebaEntity.FiltroUsuario filtro){
         List<UsuarioEntity> result = new ArrayList<>();
         //int id = filtro.getId();
         //String name = filtro.getName();
-        result = usuarioRepository.sp_busqueda_tabla_prueba(filtro.getId(), filtro.getName(), filtro.getEmail());
+        result = usuarioRepository.sp_ricerca_tabla_prueba(filtro.getId(), filtro.getName(), filtro.getEmail());
         return result;
     }
 
-    //FUNCION INSERIMENTO
+    //FUNCION INSERTAMIENTO
     public boolean insertar_persona(String nombre, String email){
         try {
             System.out.println("We are here on Service!!");
@@ -50,7 +51,7 @@ public class UsuarioService {
         }
     }
 
-    public String actualizar_persona(LoginEntity.FiltroUsuario filtro){
+    public String actualizar_persona(UsuariopruebaEntity.FiltroUsuario filtro){
         String message = "";
         try {
             System.out.println(filtro);

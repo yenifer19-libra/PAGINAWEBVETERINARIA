@@ -9,8 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import paginawebveterinaria.entity.LoginEntity;
 import paginawebveterinaria.entity.UsuarioEntity;
+import paginawebveterinaria.entity.LoginEntity.UsuariopruebaEntity;
 import paginawebveterinaria.service.UsuarioService;
 
 @RestController
@@ -20,8 +20,8 @@ public class UsuarioController {
     @Autowired private UsuarioService usuarioService;
 
     //FUNCION BUSQUEDA
-    @GetMapping("/busqueda1")
-    public ResponseEntity<List<UsuarioEntity>> busquedaTabellaPrueba1(
+    @GetMapping("/ricerca1")
+    public ResponseEntity<List<UsuarioEntity>> busquedaTablaPrueba1(
         @RequestParam(required = false) Integer  id,
         @RequestParam(required = false) String name,
         @RequestParam(required = false) String email
@@ -33,14 +33,14 @@ public class UsuarioController {
         return ResponseEntity.ok(result);
     }
 
-    @PostMapping("/busqueda2")
-    public ResponseEntity<List<UsuarioEntity>> busquedaTabellaPrueba2Post(@RequestBody LoginEntity.FiltroUsuario filtro) {
+    @PostMapping("/ricerca2")
+    public ResponseEntity<List<UsuarioEntity>> busquedaTablaPrueba2Post(@RequestBody UsuariopruebaEntity.FiltroUsuario filtro) {
         List<UsuarioEntity> result = usuarioService.busqueda_tabla_prueba_2(filtro);
         return ResponseEntity.ok(result);
     }
 
     //FUNCION INSERIMENTO
-    @GetMapping("/inserimento")
+    @GetMapping("/insertamiento")
     public ResponseEntity<String> insertarPersona(
         @RequestParam(required=false, name = "nombre") String nombre,
         @RequestParam(required=false, name = "email") String email
@@ -60,7 +60,7 @@ public class UsuarioController {
 
     //FUNCION DE ACTUALIZAR
     @PostMapping("/actualizar")
-    public ResponseEntity<String> actualizar_persona(@RequestBody LoginEntity.FiltroUsuario filtro) {
+    public ResponseEntity<String> actualizar_persona(@RequestBody UsuariopruebaEntity.FiltroUsuario filtro) {
         String result = usuarioService.actualizar_persona(filtro);
         return ResponseEntity.ok(result);
     }
