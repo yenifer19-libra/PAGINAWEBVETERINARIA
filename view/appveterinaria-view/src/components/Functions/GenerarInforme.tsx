@@ -13,3 +13,5 @@ const GenerarInforme = (props: Props) => {
     </div>
   )
 }
+
+export default GenerarInforme

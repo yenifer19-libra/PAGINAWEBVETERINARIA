@@ -50,9 +50,6 @@ const FunctionsPage: React.FC<Props> = ({
             className="bg-white text-center flex flex-col justify-center p-4 rounded-lg shadow-md max-h-[30vh] cursor-pointer hover:bg-gray-100 ease-in-out duration-300"
             onClick={() => onFunctionSelect(item.cod_tipo_funcion)}
           >
-            <p className="text-gray-800">
-              Cod Tipo Función: {item.cod_tipo_funcion}
-            </p>
             <h1 className="text-gray-800 text-2xl">
               <b>{item.desc_tipo_funcion}</b>
             </h1>
