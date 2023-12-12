@@ -51,4 +51,15 @@ public class AgendarCitaController {
         return ResponseEntity.ok(result);
     }
 
+    @GetMapping("/generar_diagnostico")
+    public void generar_diagnostico(@RequestParam(required = false) Integer cod_cita,
+            @RequestParam(required = false) String diagnostico,
+            @RequestParam(required = false) String receta) {
+        agendar_cita.generar_diagnostico(cod_cita, diagnostico, receta);
+    }
+
+    @GetMapping("/cancelar_cita")
+    public void cancelar_cita(@RequestParam(required = false) Integer cod_cita) {
+        agendar_cita.cancelar_cita(cod_cita);
+    }
 }
